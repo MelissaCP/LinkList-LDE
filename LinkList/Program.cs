@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LinkList
 {
 
-    //Creamos una clase para el nodo
+    //Creamos una clase para el nodo  
     internal class LDCNode
     {
         //Creamos la estructura que va a contener los nodos
