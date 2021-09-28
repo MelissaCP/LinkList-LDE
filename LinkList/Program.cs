@@ -8,39 +8,39 @@ namespace LinkList
 {
 
     //Creamos una clase para el nodo  
-    internal class LDCNode
+    internal class LDCNode  
     {
         //Creamos la estructura que va a contener los nodos
         //Dato del nodo entero
-        internal int data;
+        internal int Data;
 
         //Nodo siguiente=nulo 
-        internal LDCNode next;
+        internal LDCNode Next;
 
         //Nodo atras
-        internal LDCNode back;
+        internal LDCNode Back;
 
 
 
         //Declaramos metodo get(obtener) retorna datos, metodo set(colocar) datos=valor
-        public int Data
+        public int data
         {
-            get { return data; }
-            set { data = value; }
+            get { return Data; }
+            set { Data = value; }
         }
 
         //Declaramos metodo get(obtener) retorna nodo siguiente, metodo set(colocar) siguiente=valor 
-        public LDCNode Next
+        public LDCNode next
         {
-            get { return next; }
-            set { next = value; }
+            get { return Next; }
+            set { Next = value; }
         }
         //Encapsula 
         //Declaramos metodo get(obtener) retorna nodo atras, metodo set(colocar) atras=valor
-        public LDCNode Back
+        public LDCNode back
         {
-            get { return back; }
-            set { back = value; }
+            get { return Back; }
+            set { Back = value; }
         }
         //Se crea un constructor para indicarle el valor de las variables data = entero  y next= null
         //Constructor
@@ -60,10 +60,8 @@ namespace LinkList
         //Variable de la cabeza (Primer valor de la lista)
         //private LDENode head = new LDENode();
         internal LDCNode head;
-
         //Variable ultima(Ultimo valor de la lista)
         internal LDCNode last;
-
         //Variable nodo
         internal int n;
 
@@ -91,7 +89,7 @@ namespace LinkList
             //Declaramos a la consola que me introduzca nuevo nodo
             Console.Write("\n Ingrese el dato del nuevo nodo: ");
             //Convertimos valor introducido a la consola a valor entero
-            newNode.Data = int.Parse(Console.ReadLine());
+            newNode.data = int.Parse(Console.ReadLine());
             //Porque indicamos que la lista no a sido creada por lo tanto no contiene ningun valor
             if (this.head == null)
             {
@@ -109,9 +107,9 @@ namespace LinkList
                 //Primero=3 
                 //...3 --> 3
                 //Como ya sabemos que el nodo head es el primero le damos siguiente y posteriormenete se apunta a el mismo
-                head.Next = head;
+                head.next = head;
                 //tmb contiene un apuntador que lo apunto hasta al ultimo
-                head.Back = last;
+                head.back = last;
                 // ultimo <---- 3 ----> primero (siempre habra un circulo de ambos partes por eso es circular
                 //y andemas porque contiene doble apuntador de (siguiente-next) y (hacia atras-back)    
                 //Ya declaramos la cabeza de la lista
@@ -124,7 +122,7 @@ namespace LinkList
 
                 //ahora necesitamos que el ultimo apuntador sea el nuevo
                 // 3 --> siguiente --> 5 a donde apunta al nuevo nodo al siguiente
-                last.Next = newNode;
+                last.next = newNode;
                 //Indicamos que el nuevo nodo apunte al ultimo 
                 // 3 <---5
                 newNode.back = last;
@@ -144,23 +142,24 @@ namespace LinkList
                 //Genera una circunferencia
                 //Y contiene 2 apuntadores
                 //3<---- 3 ----><---- 5 ----><---- 6 -----><---- 7 ---->3 
-                n++;
+              //  n++;
             }
             Console.Write("\n Nuevo nodo ingresado con exito \n");
-            
+
             /*    
             newNode.next = this.head;
             this.head = newNode;
          */
-
+          
         }
-         
+   
 
-        //Desplegar lista doble circular
-        //Creamos un nuevo nodo que se llama actual (present)
-        //Metodo para recorer desde el primero hasta el ultimo
-        //Metodo desplegar lista
-        internal void displaylistPU(int new_present)
+
+//Desplegar lista doble circular
+//Creamos un nuevo nodo que se llama actual (present)
+//Metodo para recorer desde el primero hasta el ultimo
+//Metodo desplegar lista
+internal void displaylistPU(int new_present)
         {
             //Declaramos nuevo nodo
             //vamos desde el primer nodo recorriendo la lista
@@ -177,7 +176,7 @@ namespace LinkList
                 {
                     //Imprimo actual dato
                     //Si encuenta datos que me los imprima con esa condicion
-                    Console.WriteLine(" " + present.Data);
+                    Console.WriteLine(" " + present.data);
                     //Imprimira el 3
                     //Nodo apunta al siguiente 3 --->5
                     present = present.next;
@@ -188,10 +187,10 @@ namespace LinkList
             }
             else
             {
-                Console.WriteLine("\n La lista se encuenta vacia");
+                Console.WriteLine("\n La lista se encuenta vacia \n");
             }
             //3<- 3 ->, <- 5 ->,  6, 7, 9, 1, 12, 34, 25, 30
-          
+     
         }
         //Desplegar la lista desde el ultimo hacia el primero
         internal void displaylistUP(int new_present)
@@ -208,13 +207,13 @@ namespace LinkList
                 {
                     Console.WriteLine(" " + present.data);
                     //actual dato con apuntador hace atras
-                    present = present.Back;
+                    present = present.back;
                 }
                 while (present != last);
             }
             else
             {
-                Console.WriteLine("\n La lista se encuentra vacia");
+                Console.WriteLine("\n La lista se encuentra vacia\n");
             }
         }
 
