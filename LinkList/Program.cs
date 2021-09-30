@@ -48,7 +48,7 @@ namespace LinkList
             next = null;
         }
     }
-    //Creamos una clase para lista doblemente enlazada 
+    //Creamos una clase para lista doblemente enlazada  
     //Que significa que sea una Lista de Doblemente enlazadas?, 
     //Significa que puede recorrer los valores desde el primer nodo hasta el ultimo y diseversa (doble) del ultimo hasta el primero
     // 3, 5, 6, 7, 9, 1, 12, 34, 25, 30
