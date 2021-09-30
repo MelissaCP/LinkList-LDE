@@ -53,7 +53,7 @@ namespace LinkList
     //Significa que puede recorrer los valores desde el primer nodo hasta el ultimo y diseversa (doble) del ultimo hasta el primero
     // 3, 5, 6, 7, 9, 1, 12, 34, 25, 30
     internal class DoublyLinkedList
-    {
+    { 
 
         //Variable de la cabeza (Primer valor de la lista)
         //private LDENode head = new LDENode();
